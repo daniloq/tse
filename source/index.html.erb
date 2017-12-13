@@ -78,19 +78,50 @@ title: Talent Soup Express - Pattern Library
       <label class="ts-form__label">Inputs</label>
       <input class="ts-form__input" type='text' placeholder='This is an input'/>
       <br>
-      <label class="ts-form__label">Checkbox</label>
-      <input type='checkbox' checked='true' />
-      <input type='checkbox' checked='false' />
+      <br>
+      <div class="ts-form__field ts-form__field--error">
+        <label class="ts-form__label">Input Errors</label>
+        <input class="ts-form__input" type='text' placeholder='This is an input'/>
+        <div class="ts-form__helper">
+          Something went wrong!
+        </div>
+      </div>
+      <br>
+      <label class="ts-form__label">Inline Input</label>
+      <div class="ts-form__field ts-form__field--inline">
+        <label class="ts-form__label">Label</label>
+        <input class="ts-form__input" type='text' placeholder='This is an input'/>
+      </div>
+      <br>
+      <label class="ts-form__label">Block Inputs</label>
+      <input class="ts-form__input ts-form__input--block" type='text' placeholder='This is an input'/>
+      <br>
+      <br>
+      <label class="ts-form__label">Sweet</label>
+      <div class="ts-form__field ts-form__field--inline">
+        <input type="checkbox" checked>
+        <label class="ts-form__label">Awesome</label>
+        <br>
+        <input type='checkbox'>
+        <label class="ts-form__label">Checkbox</label>
+      </div>
       <br>
       <label class="ts-form__label">Radio</label>
-      <input type='radio' name='radio' />
-      <input type='radio' name='radio'/>
+      <div class="ts-form__field ts-form__field--inline">
+        <input type='radio' name='radio' />
+        <label class="ts-form__label">Yes</label>
+        <br>
+        <input type='radio' name='radio'/>
+        <label class="ts-form__label">No</label>
+      </div>
       <br>
       <label class="ts-form__label">Textarea</label>
       <textarea class="ts-form__textarea" rows="10"></textarea>
       <br>
+      <br>
       <label class="ts-form__label">Submit Button</label>
       <input class="ts-button ts-button--primary" type="submit" value="You must submit!"/>
+      <br>
       <br>
     </form>
   </article>

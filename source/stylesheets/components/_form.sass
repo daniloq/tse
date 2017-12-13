@@ -1,5 +1,31 @@
 .ts-form
 
+  &__field
+
+    &--inline
+      .ts-form__label
+        display: inline-block
+
+    &--error
+
+      .ts-form__label
+        color: $red
+
+      .ts-form__input
+        border-color: $red
+        margin-bottom: 0
+
+        &:hover
+          border-color: $red
+
+      .ts-form__helper
+        display: block
+        color: $red
+        margin-bottom: rem(10)
+
+  &__helper
+    display: none
+
   &__label
     font-weight: 600
     display: block
@@ -19,6 +45,9 @@
 
     &:focus
       border-color: $gray
+
+    &--block
+      width: 100%
 
   &__textarea
     padding: rem(10)
