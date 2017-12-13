@@ -1,0 +1,57 @@
+.ts-button
+  +transition(all, .3s)
+  border: rem(1) solid $gray
+  border-radius: rem(4)
+  background-color: $gray
+  color: $white
+  font-size: rem(16)
+  padding: 0 rem(20)
+  height: rem(35)
+  display: inline-flex
+  font-weight: 600
+  align-items: center
+  margin-bottom: rem(10)
+
+  &:hover
+    color: $white
+    background-color: darken($gray, 10%)
+    cursor: pointer
+    border-color: darken($gray, 10%)
+
+  &--small
+    height: rem(25)
+    padding: 0 rem(10)
+    font-size: rem(12)
+
+  &--large
+    height: rem(50)
+    padding: 0 rem(40)
+    font-size: rem(20)
+
+  &--ghost
+    background-color: transparent
+    color: $gray
+    border-color: $gray
+
+    &:hover
+      background-color: darken($gray, 10%)
+      border-color: darken($gray, 10%)
+      color: $white
+
+  &--primary
+    background-color: $red
+    border-color: $red
+
+    &:hover
+      background-color: darken($red, 10%)
+      border-color: darken($red, 10%)
+
+    &-ghost
+      background-color: transparent
+      color: $red
+      border-color: $red
+
+      &:hover
+        background-color: darken($red, 10%)
+        border-color: darken($red, 10%)
+        color: $white

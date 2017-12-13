@@ -7,6 +7,8 @@
 // Site Components
 @import 'components/variables'
 @import 'components/typography'
+@import 'components/button'
+@import 'components/form'
 
 // Pattern Library CSS
 @import 'pattern-css'
@@ -16,4 +18,4 @@
 $browser-context: 16
 
 @function em($pixels, $context: $browser-context)
-  @return #{$pixels/$context}em
+  @return #{$pixels/$context}rem

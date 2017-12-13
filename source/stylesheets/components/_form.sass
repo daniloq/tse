@@ -1,0 +1,25 @@
+.ts-form
+
+  &__label
+    font-weight: 600
+    display: block
+    color: $black
+
+  &__input, &__textarea
+    +transition(all, .3s)
+    border: rem(1) solid $med-gray
+    border-radius: rem(4)
+    height: rem(35)
+    padding: 0 rem(10)
+    font-size: rem(16)
+    margin-bottom: rem(10)
+
+    &:hover
+      border-color: $gray
+
+    &:focus
+      border-color: $gray
+
+  &__textarea
+    padding: rem(10)
+    min-height: rem(100)

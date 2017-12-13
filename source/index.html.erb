@@ -35,39 +35,66 @@ title: Talent Soup Express - Pattern Library
 <section class="ts-pattern__container">
 
   <article>
-    Button
+    <button class="ts-button ts-button--small">Small Default</button>
+    <br>
+    <button class="ts-button ts-button--small ts-button--ghost">Small Ghost</button>
+    <br>
+    <a href="#" class="ts-button ts-button--small ts-button--primary">Small Primary</a>
+    <br>
+    <input class="ts-button ts-button--small ts-button--primary-ghost" type="submit" value="Small Primary Ghost" />
+    <br>
+    <br>
+    <button class="ts-button">Default</button>
+    <br>
+    <button class="ts-button ts-button--ghost">Ghost</button>
+    <br>
+    <a href="#" class="ts-button ts-button--primary">Primary</a>
+    <br>
+    <a href="#" class="ts-button ts-button--primary-ghost">Primary Ghost</a>
+    <br>
+    <br>
+    <button class="ts-button ts-button--large">Large Default</button>
+    <br>
+    <button class="ts-button ts-button--large ts-button--ghost">Large Ghost</button>
+    <br>
+    <a href="#" class="ts-button ts-button--large ts-button--primary">Large Primary</a>
+    <br>
+    <a href="#" class="ts-button ts-button--large ts-button--primary-ghost">Large Primary Ghost</a>
   </article>
 
   <article>
-    <button>Button</button>
+    <script src="https://gist.github.com/daniloq/391a3978480ac382b667478fb97f466d.js"></script>
   </article>
 
 </section>
 
-  <ul>
-    <li>
-      List 1
-    </li>
-    <li>
-      List 2
-    </li>
-    <li>
-      List 3
-    </li>
-  </ul>
+<header class="ts-pattern__heading">
+  <h3>Forms</h3>
+</header>
 
-
-  <form>
-    <label>A label</label>
-    <input type='text' placeholder='This is an input'/>
-    <label>Checkbox</label>
-    <input type='checkbox' checked='true' />
-    <input type='checkbox' checked='false' />
-    <label>Radio</label>
-    <input type='radio' name='radio' />
-    <input type='radio' name='radio'/>
-    <label>Textbox</label>
-    <input type='textbox' value='This is a textbox'/>
-    <label>Submit Button</label>
-    <input type='submit' value='You must submit!'/>
-  </form>
+<section class="ts-pattern__container">
+  <article>
+    <form class="ts-form">
+      <label class="ts-form__label">Inputs</label>
+      <input class="ts-form__input" type='text' placeholder='This is an input'/>
+      <br>
+      <label class="ts-form__label">Checkbox</label>
+      <input type='checkbox' checked='true' />
+      <input type='checkbox' checked='false' />
+      <br>
+      <label class="ts-form__label">Radio</label>
+      <input type='radio' name='radio' />
+      <input type='radio' name='radio'/>
+      <br>
+      <label class="ts-form__label">Textarea</label>
+      <textarea class="ts-form__textarea" rows="10"></textarea>
+      <br>
+      <label class="ts-form__label">Submit Button</label>
+      <input class="ts-button ts-button--primary" type="submit" value="You must submit!"/>
+      <br>
+    </form>
+  </article>
+  <article>
+    <script src="https://gist.github.com/daniloq/03648dfbe6aa7bac68bbd87ac2ca4450.js"></script>
+  </article>
+</section>
