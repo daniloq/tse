@@ -1,0 +1,22 @@
+// Requires Neat
+
+// $neat-grid: (columns: 12, gutter: 20px)
+
+.ts-row
+  @include grid-container
+  margin-bottom: em(20)
+
+.ts-column
+  @include grid-column(1)
+
+.ts-column--6
+  @include grid-column(6)
+
+.ts-column--4
+  @include grid-column(4)
+
+.ts-column--3
+  @include grid-column(3)
+
+.ts-column--2
+  @include grid-column(2)
