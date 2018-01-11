@@ -1,202 +1,86 @@
----
-title: Talent Soup Express - Pattern Library
----
-<header class="ts-pattern__heading">
-  <h3>Typography</h3>
-</header>
-<section class="ts-pattern__container">
-  <article>
-    <div class="ts-typography">
-      <h1>H1 Text</h1>
+<!-- Top Nav -->
+<nav class="ts-topnav">
 
-      <h2>H2 Text</h2>
+  <!-- max-width wrapper -->
+  <div class="ts-wrapper">
 
-      <h3>H3 Text</h3>
-
-      <h4>H4 Text</h4>
-
-      <h5>H5 Text</h5>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut congue ligula, eget efficitur lacus. Sed ut sem purus. Mauris molestie quam vitae leo viverra, vel efficitur nisi porttitor. Vivamus vel elementum mauris. Phasellus a ornare sapien. Sed commodo auctor magna, at accumsan felis accumsan ac. Etiam blandit semper lectus vitae sollicitudin. Etiam vitae pretium turpis. Nulla egestas dolor molestie, finibus neque id, efficitur leo.</p>
-
-      <a href="#!">A link</a>
-    </div>
-  </article>
-  <article>
-    <script src="https://gist.github.com/daniloq/05b8024b15882a06c7667f9c75e3f214.js"></script>
-  </article>
-
-</section>
-
-<header class="ts-pattern__heading">
-  <h3>Buttons</h3>
-</header>
-
-<section class="ts-pattern__container">
-
-  <article>
-    <button class="ts-button ts-button--small">Small Default</button>
-    <br>
-    <button class="ts-button ts-button--small ts-button--ghost">Small Ghost</button>
-    <br>
-    <a href="#" class="ts-button ts-button--small ts-button--primary">Small Primary</a>
-    <br>
-    <input class="ts-button ts-button--small ts-button--primary-ghost" type="submit" value="Small Primary Ghost" />
-    <br>
-    <br>
-    <button class="ts-button">Default</button>
-    <br>
-    <button class="ts-button ts-button--ghost">Ghost</button>
-    <br>
-    <a href="#" class="ts-button ts-button--primary">Primary</a>
-    <br>
-    <a href="#" class="ts-button ts-button--primary-ghost">Primary Ghost</a>
-    <br>
-    <br>
-    <button class="ts-button ts-button--large">Large Default</button>
-    <br>
-    <button class="ts-button ts-button--large ts-button--ghost">Large Ghost</button>
-    <br>
-    <a href="#" class="ts-button ts-button--large ts-button--primary">Large Primary</a>
-    <br>
-    <a href="#" class="ts-button ts-button--large ts-button--primary-ghost">Large Primary Ghost</a>
-  </article>
-
-  <article>
-    <script src="https://gist.github.com/daniloq/391a3978480ac382b667478fb97f466d.js"></script>
-  </article>
-
-</section>
-
-<header class="ts-pattern__heading">
-  <h3>Forms</h3>
-</header>
-
-<section class="ts-pattern__container">
-  <article>
-    <form class="ts-form">
-      <label class="ts-form__label">Inputs</label>
-      <input class="ts-form__input" type='text' placeholder='This is an input'/>
-      <br>
-      <br>
-      <div class="ts-form__field ts-form__field--error">
-        <label class="ts-form__label">Input Errors</label>
-        <input class="ts-form__input" type='text' placeholder='This is an input'/>
-        <div class="ts-form__helper">
-          Something went wrong!
-        </div>
-      </div>
-      <br>
-      <label class="ts-form__label">Inline Input</label>
-      <div class="ts-form__field ts-form__field--inline">
-        <label class="ts-form__label">Label</label>
-        <input class="ts-form__input" type='text' placeholder='This is an input'/>
-      </div>
-      <br>
-      <label class="ts-form__label">Block Inputs</label>
-      <input class="ts-form__input ts-form__input--block" type='text' placeholder='This is an input'/>
-      <br>
-      <br>
-      <label class="ts-form__label">Sweet</label>
-      <div class="ts-form__field ts-form__field--inline">
-        <input type="checkbox" checked>
-        <label class="ts-form__label">Awesome</label>
-        <br>
-        <input type='checkbox'>
-        <label class="ts-form__label">Checkbox</label>
-      </div>
-      <br>
-      <label class="ts-form__label">Radio</label>
-      <div class="ts-form__field ts-form__field--inline">
-        <input type='radio' name='radio' />
-        <label class="ts-form__label">Yes</label>
-        <br>
-        <input type='radio' name='radio'/>
-        <label class="ts-form__label">No</label>
-      </div>
-      <br>
-      <label class="ts-form__label">Textarea</label>
-      <textarea class="ts-form__textarea" rows="10"></textarea>
-      <br>
-      <br>
-      <label class="ts-form__label">Submit Button</label>
-      <input class="ts-button ts-button--primary" type="submit" value="You must submit!"/>
-      <br>
-      <br>
-    </form>
-  </article>
-  <article>
-    <script src="https://gist.github.com/daniloq/03648dfbe6aa7bac68bbd87ac2ca4450.js"></script>
-  </article>
-</section>
-
-<header class="ts-pattern__heading">
-  <h3>Grid</h3>
-</header>
-
-<section class="ts-pattern__container">
-
-  <article class="ts-pattern__grid">
-    <div class="ts-row">
-      <% - 12.times do %>
-        <div class="ts-column">
-          1
-        </div>
+    <div class="ts-topnav__logo">
+      <% link_to "/" do %>
+        <h1>Talent<span>Soup</span></h1>
       <% end %>
     </div>
 
-    <div class="ts-row">
-      <% - 2.times do %>
-        <div class="ts-column--6">
-          2
-        </div>
-      <% end %>
+    <div class="ts-topnav__links">
+      <%= link_to "Book Talent", "#" %>
+      <%= link_to "Become Talent", "#" %>
+      <%= link_to "Login", "#" %>
     </div>
 
-    <div class="ts-row">
-      <% - 3.times do %>
-        <div class="ts-column--4">
-          3
-        </div>
-      <% end %>
+  </div>
+
+</nav>
+
+<!-- Hero -->
+<section class="ts-hero">
+
+  <div class="ts-wrapper">
+
+    <h2>Browse and Book Models and Actors</h2>
+
+    <div class="ts-marketing-filters">
+      <div>
+        <label class="ts-form__label">Location</label>
+        <input class="ts-form__input" type="text" placeholder="City/State, or Zip Code" />
+      </div>
+      <div>
+        <label class="ts-form__label">Age</label>
+        <input class="ts-form__input" type="text" placeholder="Select an age range" />
+      </div>
+      <div>
+        <label class="ts-form__label">Gender</label>
+        <input class="ts-form__input" type="text" placeholder="Pick gender(s)" />
+      </div>
+      <input class="ts-button ts-button--primary ts-button--large" type="submit" value="Search" />
     </div>
+  </div>
+
+</section>
+
+<section>
+
+  <div class="ts-wrapper">
+
+    <header class="ts-flex">
+      <h3>Experience Talent</h3>
+      <%= link_to "Browse All", "#" %>
+    </header>
 
     <div class="ts-row">
-      <% - 4.times do %>
+
+      <% - 8.times do%>
+
         <div class="ts-column--3">
-          4
+
+          <div class="ts-card ts-card--talent">
+
+            <img src="https://s3.amazonaws.com/talentsoup/35841/3584148232015185-webcomp.jpg" />
+            <h5>
+              <span>Gina C</span>, <span>34</span>
+            </h5>
+            <p>
+              <span>5’9”</span> · <span>135 lbs</span> · <span>Columbia, SC</span>
+            </p>
+
+          </div>
+
         </div>
+
       <% end %>
+
     </div>
 
-    <div class="ts-row">
-      <% - 6.times do %>
-        <div class="ts-column--2">
-          6
-        </div>
-      <% end %>
     </div>
 
-    <div class="ts-row">
-        <div class="ts-column--6">
-          6
-        </div>
-        <div class="ts-column--2">
-          2
-        </div>
-        <div class="ts-column--2">
-          2
-        </div>
-        <div class="ts-column--2">
-          2
-        </div>
-    </div>
-
-
-  </article>
-
-  <article>
-    <script src="https://gist.github.com/daniloq/f354a010115428d82500b0164bb58602.js"></script>
-  </article>
+  </div>
 
 </section>
