@@ -13,8 +13,9 @@
     border-top: rem(1) solid $light-gray
     border-bottom: rem(1) solid $light-gray
     align-items: center
-    height: rem(100)
+    height: auto
     margin: rem(40) 0
+    padding: rem(10) 0
     img
       width: 100%
       height: auto
@@ -27,12 +28,21 @@
       align-items: center
       padding: rem(10)
 
+    +grid-media($mobile)
+      display: inline-block
+      height: 100%
+
+      .ts-image-asset
+        +grid-column(6)
+        height: auto
+
+
   &--background-image
     position: relative
     color: $white
     background: url('../images/talent-soup-bg.jpg') no-repeat
     background-size: cover
-    padding: rem(100)
+    padding: rem(80) 0
 
     h3
       color: $white

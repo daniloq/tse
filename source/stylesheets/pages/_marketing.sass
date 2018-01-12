@@ -2,6 +2,7 @@
   display: flex
   justify-content: center
   align-items: flex-end
+  flex-direction: column
 
   .ts-form__label
     text-align: left
@@ -21,3 +22,27 @@
   div:first-of-type
     .ts-form__input
       border-radius: rem(4) 0 0 rem(4)
+
+
+  +grid-media($tablet)
+    flex-direction: row
+
+  +grid-media($mobile)
+    flex-direction: column
+
+    div
+      width: 100%
+
+    .ts-form__label
+      padding-left: 0
+
+    .ts-form__input
+      width: 100%
+      border: 1px solid $light-gray
+      border-radius: rem(4)
+
+    .ts-button--large
+      width: 100%
+      border-radius: rem(4)
+      text-align: center
+      display: block
