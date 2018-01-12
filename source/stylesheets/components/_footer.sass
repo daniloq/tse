@@ -1,0 +1,44 @@
+.ts-footer
+  background: $black
+  padding: rem(80) 0
+
+  &__logo
+    h1
+      color: $white
+      font-size: rem(24)
+      font-weight: 600
+      line-height: 1
+      margin: 0
+      span
+        color: $gray
+
+  .ts-row
+    margin-bottom: 0
+
+  &__links
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+    dl, dd
+      margin: 0
+      padding: 0
+      color: $gray
+
+    a
+      color: $gray
+      margin-bottom: rem(5)
+      display: inline-block
+      &:hover
+        color: darken($gray, 5%)
+
+    dt
+      color: $white
+      font-size: rem(20)
+      font-weight: 600
+      margin-bottom: rem(10)
+
+    &--social
+      color: $gray
+      font-size: rem(24)
+      margin: 0 rem(5)
