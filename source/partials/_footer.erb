@@ -1,0 +1,69 @@
+<footer class="ts-footer">
+
+  <div class="ts-wrapper">
+
+    <div class="ts-row">
+
+      <div class="ts-column--3">
+        <div class="ts-footer__logo">
+          <h1>Talent<span>Soup</span></h1>
+        </div>
+      </div>
+
+      <div class="ts-column--7 ts-footer__links">
+        <dl>
+          <dt>
+            Contact
+          </dt>
+          <dd>
+            Call 877-775-SOUP
+          </dd>
+          <dd>
+            <%= link_to "Email the Chef", "mailto:chef@talentsoup.com" %>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            Help
+          </dt>
+          <dd>
+            <%= link_to "Client price calculator", "https://talentsoup.com/quotes/new" %>
+          </dd>
+          <dd>
+            <%= link_to "Help / FAQ", "http://help.talentsoup.com/" %>
+          </dd>
+          <dd>
+            <%= link_to "Helper videos", "http://vimeo.com/talentsoup" %>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            Legal
+          </dt>
+          <dd>
+            <%= link_to "Privacy", "https://talentsoup.com/privacy" %>
+          </dd>
+          <dd>
+            <%= link_to "Terms and conditions", "https://talentsoup.com/termsofservice" %>
+          </dd>
+        </dl>
+
+      </div>
+
+      <div class="ts-column--2 ts-right">
+        <% link_to "http://blog.talentsoup.com/", class: "ts-footer__links--social", target: "_blank" do %>
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        <% end %>
+        <% link_to "http://twitter.com/talentsoup", class: "ts-footer__links--social", target: "_blank" do %>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        <% end %>
+        <% link_to "https://www.facebook.com/TalentSoup", class: "ts-footer__links--social", target: "_blank" do %>
+          <i class="fa fa-rss" aria-hidden="true"></i>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
