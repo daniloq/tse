@@ -8,6 +8,23 @@
 .ts-banner
   display: flex
 
+  .ts-column--4
+    width: 100%
+    margin: 0
+    text-align: center
+  .ts-column--8
+    width: 100%
+    margin: 0
+    text-align: center
+
+  +grid-media($tablet)
+    .ts-column--4
+      +grid-column(4)
+      text-align: left
+    .ts-column--8
+      +grid-column(8)
+      text-align: left
+
   &--logo
     justify-content: space-between
     border-top: rem(1) solid $light-gray
@@ -31,6 +48,7 @@
     +grid-media($mobile)
       display: inline-block
       height: 100%
+      margin: rem(10) 0
 
       .ts-image-asset
         +grid-column(6)
