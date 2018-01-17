@@ -1,16 +1,22 @@
 .ts-footer
   background: $black
-  padding: rem(80) 0
+  padding: rem(40) 0
+
+  +grid-media($tablet)
+    padding: rem(80) 0
 
   &__logo
-    h1
+    h5
       color: $white
       font-size: rem(24)
       font-weight: 600
       line-height: 1
-      margin: 0
+      margin: 0 0 rem(20) 0
       span
         color: $gray
+
+      +grid-media($tablet)
+        margin: 0
 
   .ts-row
     margin-bottom: 0
@@ -19,6 +25,7 @@
     display: flex
     justify-content: space-between
     align-items: flex-start
+    flex-direction: column
 
     dl, dd
       margin: 0
@@ -45,3 +52,6 @@
       color: $gray
       font-size: rem(24)
       margin: 0 rem(5)
+
+    +grid-media($tablet)
+      flex-direction: row

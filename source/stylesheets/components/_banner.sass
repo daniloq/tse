@@ -7,20 +7,31 @@
 
 .ts-banner
   display: flex
+  padding: rem(40) 0
 
   .ts-column--4
     width: 100%
     margin: 0
     text-align: center
+
   .ts-column--8
     width: 100%
     margin: 0
     text-align: center
 
+  .ts-button
+    margin: 0 0 rem(20) 0
+
   +grid-media($tablet)
+    padding: rem(80) 0
+
+    .ts-button
+      margin: 0
+
     .ts-column--4
       +grid-column(4)
       text-align: left
+
     .ts-column--8
       +grid-column(8)
       text-align: left
@@ -60,7 +71,6 @@
     color: $white
     background: url('../images/talent-soup-bg.jpg') no-repeat
     background-size: cover
-    padding: rem(80) 0
 
     h3
       color: $white
