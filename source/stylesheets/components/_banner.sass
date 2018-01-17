@@ -49,3 +49,12 @@
 
     img
       width: 100%
+
+    .ts-column--4
+      width: 100%
+      +grid-media($tablet)
+        +grid-column(4)
+
+    .ts-right
+      +grid-media($tablet)
+        float: right

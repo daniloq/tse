@@ -10,12 +10,30 @@
       <% end %>
     </div>
 
-    <div class="ts-topnav__links">
-      <%= link_to "Book Talent", "#" %>
-      <%= link_to "Become Talent", "#" %>
-      <%= link_to "Login", "#" %>
+    <div class="ts-topnav__desktop-links">
+      <%= partial "partials/nav-links" %>
+    </div>
+
+    <div class="ts-topnav__mobile-links">
+      <% link_to "", class: "ts-mobile-nav__button" do %>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      <% end %>
+      <div class="ts-topnav__mobile-menu">
+        <%= partial "partials/nav-links" %>
+      </div>
     </div>
 
   </div>
 
 </nav>
+
+<script>
+  $('.ts-mobile-nav__button').click(function(e){
+    e.preventDefault();
+    $('.ts-topnav__mobile-menu').addClass('ts-topnav__mobile-menu--active');
+  });
+  $('.ts-mobile-nav__button--close').click(function(e){
+    e.preventDefault();
+    $('.ts-topnav__mobile-menu').removeClass('ts-topnav__mobile-menu--active');
+  });
+</script>

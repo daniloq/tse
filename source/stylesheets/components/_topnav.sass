@@ -20,3 +20,49 @@
       color: darken($med-gray, 20%)
       display: inline-flex
       margin-left: rem(80)
+
+  &__mobile-links
+    display: none
+
+    +grid-media($desktop)
+      display: block
+
+    .ts-topnav__links
+      display: none
+
+  &__desktop-links
+    display: block
+
+    +grid-media($desktop)
+      display: none
+
+.ts-topnav__mobile-menu
+  transition: all .3s
+
+  &--active
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: $gray
+
+    .ts-topnav__links
+      display: block
+      color: $white
+      padding: rem(30)
+
+      a
+        display: block
+        margin: rem(10) rem(10)
+        color: $white
+
+a.ts-mobile-nav__button, .ts-mobile-nav__button
+
+  &--close
+    display: block
+    position: absolute
+    top: rem(10)
+    right: rem(10)
+    +grid-media($tablet)
+      display: none
