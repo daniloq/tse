@@ -46,6 +46,7 @@
     left: 0
     right: 0
     background: $gray
+    z-index: 9998
 
     .ts-topnav__links
       display: block
@@ -57,12 +58,56 @@
         margin: rem(10) rem(10)
         color: $white
 
-a.ts-mobile-nav__button, .ts-mobile-nav__button
+$bar-width: rem(20)
+$bar-height: rem(3)
+$bar-spacing: rem(6)
 
-  &--close
-    display: block
-    position: absolute
-    top: rem(10)
-    right: rem(10)
-    +grid-media($tablet)
-      display: none
+.ts-hamburger-menu
+  position: absolute
+  top: rem(33)
+  right: rem(10)
+  margin: auto
+  width: $bar-width
+  height: $bar-height + $bar-spacing * 2
+  cursor: pointer
+  z-index: 9999
+
+.ts-hamburger-menu__bar,
+.ts-hamburger-menu__bar:after,
+.ts-hamburger-menu__bar:before
+  width: $bar-width
+  height: $bar-height
+
+.ts-hamburger-menu__bar
+  position: relative
+  transform: translateY($bar-spacing)
+  background: $red
+  transition: all 0ms 300ms
+  &.animate
+    background: rgba(255, 255, 255, 0)
+
+.ts-hamburger-menu__bar:before
+  content: ""
+  position: absolute
+  left: 0
+  bottom: $bar-spacing
+  background: $red
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+.ts-hamburger-menu__bar:after
+  content: ""
+  position: absolute
+  left: 0
+  top: $bar-spacing
+  background: $red
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+.ts-hamburger-menu__bar.animate:after
+  top: 0
+  transform: rotate(45deg)
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+.ts-hamburger-menu__bar.animate:before
+  bottom: 0
+  transform: rotate(-45deg)
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
