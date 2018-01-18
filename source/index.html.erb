@@ -12,11 +12,22 @@
       </div>
       <div>
         <label class="ts-form__label">Age</label>
-        <input class="ts-form__input" type="text" placeholder="Select an age range" />
+        <select class="ts-form__select">
+          <option value="" disabled selected hidden>Select an age range</option>
+          <option value="1">0 - 10</option>
+          <option value="2">11 - 20</option>
+          <option value="3">21 - 30</option>
+          <option value="4">31 - 40</option>
+          <option value="5">41 - 50+</option>
+        </select>
       </div>
       <div>
         <label class="ts-form__label">Gender</label>
-        <input class="ts-form__input" type="text" placeholder="Pick gender(s)" />
+        <select class="ts-form__select">
+          <option value="" disabled selected hidden>Pick gender</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+        </select>
       </div>
       <input class="ts-button ts-button--primary ts-button--large" type="submit" value="Search" />
     </div>
