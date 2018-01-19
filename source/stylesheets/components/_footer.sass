@@ -2,8 +2,21 @@
   background: $black
   padding: rem(40) 0
 
+  .ts-column--3, .ts-column--7, .ts-column--2
+    float: none
+    width: 100%
+
   +grid-media($tablet)
     padding: rem(80) 0
+
+    .ts-column--3
+      +grid-column(3)
+
+    .ts-column--7
+      +grid-column(7)
+
+    .ts-column--2
+      +grid-column(2)
 
   &__logo
     h5
