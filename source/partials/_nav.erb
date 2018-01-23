@@ -18,7 +18,7 @@
       <div class="ts-hamburger-menu">
         <div class="ts-hamburger-menu__bar"></div>
       </div>
-      <div class="ts-topnav__mobile-menu">
+      <div class="ts-topnav__mobile-menu" style="display:none">
         <%= partial "partials/nav-links" %>
       </div>
     </div>
@@ -31,7 +31,7 @@
   (function () {
   	$('.ts-hamburger-menu').on('click', function() {
   		$('.ts-hamburger-menu__bar').toggleClass('animate');
-      $('.ts-topnav__mobile-menu').toggleClass('ts-topnav__mobile-menu--active');
+      $('.ts-topnav__mobile-menu').slideToggle();
   	})
   })();
 </script>

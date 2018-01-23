@@ -21,6 +21,9 @@
       display: inline-flex
       margin-left: rem(80)
 
+      &:hover
+        color: darken($med-gray, 30%)
+
   &__mobile-links
     display: none
 
@@ -37,27 +40,35 @@
       display: none
 
 .ts-topnav__mobile-menu
-  transition: all .3s
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: $space
+  z-index: 9998
 
-  &--active
-    position: absolute
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    background: $gray
-    z-index: 9998
+  .ts-topnav__links
+    display: block
+    color: $white
+    padding: rem(78) 0
 
-    .ts-topnav__links
+    a
       display: block
+      margin: 0
+      padding: 0 rem(10)
       color: $white
-      padding: rem(30)
+      border-bottom: rem(1) solid darken($space, 10%)
+      height: rem(45)
+      line-height: rem(45)
 
-      a
-        display: block
-        margin: rem(10) rem(10)
-        color: $white
+      &:first-of-type
+        border-top: rem(1) solid darken($space, 10%)
 
+      &:hover
+        background: darken($space, 10%)
+
+// hamburger nav
 $bar-width: rem(20)
 $bar-height: rem(3)
 $bar-spacing: rem(6)
@@ -104,10 +115,12 @@ $bar-spacing: rem(6)
 
 .ts-hamburger-menu__bar.animate:after
   top: 0
+  background: darken($space, 10%)
   transform: rotate(45deg)
   transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
 
 .ts-hamburger-menu__bar.animate:before
   bottom: 0
+  background: darken($space, 10%)
   transform: rotate(-45deg)
   transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
